@@ -1,338 +1,944 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rohith's Portfolio</title>
-    <link rel="icon" href="images/logo.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <!-- navbar -->
-    <div id="navbar">
-      <p><span class="textcolor">[˂/>]</span> Rohith B</p>
-      <nav>
-        <a href="#introduce">Home</a>
-        <a href="#profile">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#endpage">Contact</a>
-        <a href="#" class="symbol">Download</a>
-      </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROHITH's portfolio</title>
+  <link rel="icon" href="images/headLOGO.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<style>
+  body {
+    background: #0b0b12;
+    color: white;
+  }
+
+  .about-section {
+    
+    display: flex;
+    align-items: center;
+   
+  }
+
+  .about-title {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .about-title span {
+    color: #8b5cf6;
+  }
+
+  .about-text {
+    color: #b8b8c7;
+    font-size: 18px;
+    
+  }
+
+  .about-card {
+    background: #151522;
+    border: 1px solid #272738;
+    border-radius: 20px;
+    padding: 30px;
+    height: 100%;
+    transition: 0.3s;
+  }
+
+  .about-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+  }
+
+  .about-card h4 {
+    color: #8b5cf6;
+    margin-bottom: 15px;
+  }
+
+  .skill {
+    display: inline-block;
+    background: #211b35;
+    color: #c4a8ff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 36px;
+    }
+
+    .about-text {
+      font-size: 16px;
+    }
+
+    .about-section {
+      padding: 50px 20px;
+    }
+  }
+</style>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-dark">
+
+        <div class="container">
+
+            <!-- Logo / Name -->
+            <a class="navbar-brand fw-bold" href="#">
+                <span style="background:linear-gradient(to right,cyan,yellow); background-clip:text; -webkit-text-fill-color:transparent"> Rohith B</span>
+            </a>
+
+
+            <!-- Mobile Menu Button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto align-items-md-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">
+                            Skills
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">
+                            Project
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">
+                            Education
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-md-3">
+                        <a class="btn btn-primary px-4" href="#">
+                            Resume
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+  
+<!-- HOME SECTION -->
+<section id="home" class="home-section">
+
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT SIDE -->
+            <div class="col-12 col-md-6 text-center text-md-start">
+
+                <!-- Welcome -->
+                <div class="welcome-badge">
+                    <span></span>
+                    welcome to my profile
+                </div>
+
+                <!-- Name -->
+                <h1 class="text-white fw-bold mt-3">
+                    Hi, I'm <span class="name">Rohith</span>
+                </h1>
+
+                <!-- Profession -->
+                <h2 class="profession fw-bold">
+                    Python Full Stack Developer
+                </h2>
+
+                <!-- Description -->
+                <p class="description text-light">
+                    I build modern, scalable and user-friendly web
+                    applications using python, Django and modern frontend
+                    technologies. I love turning ideas into real-world
+                    solutions through code.
+                </p>
+
+                <!-- Buttons -->
+                <div class="mt-4">
+                    <a href="#projects" class="btn btn-light me-2">
+                        View My Work →
+                    </a>
+
+                    <a href="tel:7550325505" class="btn btn-light">
+                        Contact Me ⊙
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+            <div class="col-12 col-md-6 text-center mt-5 mt-md-0">
+
+                <img src="images/transparent.png"
+                     alt="Rohith"
+                     class="profile-img">
+
+            </div>
+
+        </div>
     </div>
 
-    <!---fgrthyty-->
-    <!-- introduce -->
-    <div id="introduce">
-      <!-- intro -->
-      <div id="intro">
-        <h3>Hello, I'm</h3>
-        <h1>Rohith B</h1>
-        <h2>Python <span class="textcolor">Full Stack</span> Developer</h2>
-        <p style="width: 40%">
-          I’m a passionate Python Full Stack Developer with skills in Python,
-          Django, HTML, CSS, JavaScript, and SQL. I enjoy building responsive
-          web applications and solving real-world problems through technology.
-        </p>
-      </div>
-      <!-- contact -->
-      <div id="view">
-        <a href="#" class="symbol" target="_blank">View Projects ⭢</a>
-        <a href="tel:7550325505" class="contact"
-          >Contact Me <i class="fa-sharp fa-regular fa-circle-user"></i>
-        </a>
-      </div>
-      <!-- icons -->
-      <div id="icons">
-        <a
-          href="https://www.linkedin.com/in/rohith-b-759861349"
-          target="_blank"
-          title="Linkedin"
-          ><i class="fa-brands fa-linkedin-in"></i
-        ></a>
-        <a href="mailto:malarohith0@gmail.com" title="Mail"
-          ><i class="fa-solid fa-envelope"></i
-        ></a>
-      </div>
+</section>
+  
+<!-- ABOUT SECTION -->
+<section class="about-section" id="about">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h1 class="about-title">
+        About <span>Me</span>
+      </h1>
+
+      <p class="about-text mx-auto" style="max-width: 800px;">
+        I'm Rohith, a passionate Python Full Stack Developer with a strong
+        interest in building scalable and user-friendly web applications.
+        I enjoy learning new technologies, solving real-world problems,
+        and creating meaningful digital experiences.
+      </p>
     </div>
 
-    <!-- prrofile head -->
-    <section id="profile">
-      <div class="profileHead" style="font-size: large">
-        <span><h4 class="textcolor">About Me</h4></span>
-        <p style="line-height: 0px; font-size: 25px">
-          Passionate about building digital solutions
-        </p>
-        <div class="profileLine"></div>
-        <br />
+
+    <!-- Cards -->
+    <div class="row g-4">
+
+      <!-- Who I Am -->
+      <div class="col-lg-6">
+        <div class="about-card">
+          <h4>Who I Am</h4>
+
+          <p class="about-text">
+            I am a dedicated developer who enjoys turning ideas into
+            functional and engaging web applications. I continuously
+            explore new technologies and improve my development skills
+            through practical projects.
+          </p>
+
+          <p class="about-text">
+            My goal is to grow as a developer, strengthen my technical
+            expertise, and contribute to impactful products that solve
+            real-world problems.
+          </p>
+        </div>
       </div>
 
-      <!-- profile card -->
 
-      <div id="profileCard">
-        <img
-          src="images/background.png"
-          alt="profile"
-          width="200px"
-          height="200px"
-          style="border-radius: 50%"
-        />
+      <!-- Skills -->
+      <div class="col-lg-6" id="skills">
+        <div class="about-card">
+          <h4>My Skills</h4>
 
-        <div class="para">
-          <div id="para">
-            <p>
-              I’m an aspiring Python Full Stack Developer who enjoys creating
-              clean, responsive, and functional web applications. I have a
-              strong foundation in Python, HTML, CSS, JavaScript, SQL and I’m
-              continuously improving my skills to build practical and innovative
-              solutions.
+          <div class="mt-3">
+            <span class="skill">Python</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">Bootstrap</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Django</span>
+            <span class="skill">Git</span>
+            <span class="skill">GitHub</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- ================= MY PROJECTS ================= -->
+
+<section class="py-5 bg-dark text-white" id="projects">
+
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+
+      <h1 class="fw-bold">
+        My <span class="text-primary">Projects</span>
+      </h1>
+
+      <p class="text-secondary">
+        Some of the projects I have built using my development skills.
+      </p>
+
+    </div>
+
+
+    <!-- Cards -->
+    <div class="row g-4">
+
+
+      <!-- Portfolio -->
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card h-100 bg-black text-white border-secondary">
+
+          <img
+            src="images/image.png"
+            class="card-img-top"
+            alt="Portfolio Website"
+          >
+
+          <div class="card-body">
+
+            <h4 class="card-title" style="color: black;">
+              Portfolio Website
+            </h4>
+
+            <p class="card-text text-secondary">
+              A responsive personal portfolio website created to
+              showcase my skills, projects and experience.
             </p>
+
+            <span class="badge text-bg-primary">HTML</span>
+            <span class="badge text-bg-primary">CSS</span>
+            <span class="badge text-bg-primary">Bootstrap</span>
+            <span class="badge text-bg-primary">JavaScript</span>
+
           </div>
-          <hr />
-          <div id="details">
-            <!-- profile 1 -->
-            <div class="details">
-              <div class="detail_icon">
-                <i class="fa-regular fa-user" style="color: black"></i>
-              </div>
-              <div class="detail_name" style="line-height: 2px">
-                <h4 style="color: black">Name</h4>
-                <p>Rohith B</p>
-              </div>
-            </div>
 
-            <!-- profile 2 -->
-            <div class="details">
-              <div class="detail_icon">
-                <i class="fa-solid fa-briefcase" style="color: black"></i>
-              </div>
-              <div class="detail_name" style="line-height: 2px">
-                <h4 style="color: black">Experience</h4>
-                <p>Fresher</p>
-              </div>
-            </div>
+          
 
-            <!-- profile 3 -->
-            <div class="details">
-              <div class="detail_icon">
-                <i class="fa-solid fa-location-dot" style="color: black"></i>
-              </div>
-              <div class="detail_name" style="line-height: 2px">
-                <h4 style="color: black">Location</h4>
-                <p>Puducherry</p>
-              </div>
-            </div>
-
-            <!-- profile 4 -->
-            <div class="details">
-              <div class="detail_icon">
-                <i class="fa-regular fa-envelope" style="color: black"></i>
-              </div>
-              <div class="detail_name" style="line-height: 2px">
-                <h4 style="color: black">Email</h4>
-                <p>malarohith0@gmail.com</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- skills -->
-    <section id="skills">
-      <div class="profileHead" style="font-size: large; padding-top: 5px">
-        <h4 class="textcolor">My Skills</h4>
-        <p style="line-height: 0px; font-size: 25px">
-          Technologies I work with
-        </p>
-        <div class="profileLine"></div>
-      </div>
-      <br />
-
-      <div id="skillcard">
-        <div id="skcard">
-          <!-- skill 1 -->
-          <div class="skills">
-            <img src="images/html.webp" style="width: 50px; height: 50px" />
-            <h3>HTML</h3>
-            <p>90%</p>
-            <div class="progress">
-              <div class="html"></div>
-            </div>
-          </div>
-
-          <!-- skill 2 -->
-          <div class="skills">
-            <img src="images/css.webp" style="width: 50px; height: 50px" />
-            <h3>CSS</h3>
-            <p>90%</p>
-            <div class="progress">
-              <div class="css"></div>
-            </div>
-          </div>
-
-          <!-- skill 3 -->
-
-          <div class="skills">
-            <img src="images/js.webp" style="width: 50px; height: 50px" />
-            <h3>JavaScript</h3>
-            <p>80%</p>
-            <div class="progress">
-              <div class="javascript"></div>
-            </div>
-          </div>
-
-          <!-- skill 4 -->
-          <div class="skills">
-            <img src="images/sql.png" style="width: 50px; height: 50px" />
-            <h3>SQL</h3>
-            <p>80%</p>
-            <div class="progress">
-              <div class="sql"></div>
-            </div>
-          </div>
-
-          <!-- skill 5 -->
-          <div class="skills">
-            <img src="images/py.png" style="width: 50px; height: 50px" />
-            <h3>Python</h3>
-            <p>80%</p>
-            <div class="progress">
-              <div class="python"></div>
-            </div>
-          </div>
-
-          <!-- skill 6 -->
-          <div class="skills">
-            <img src="images/react.png" style="width: 50px; height: 50px" />
-            <h3>React</h3>
-            <p>75%</p>
-            <div class="progress">
-              <div class="react"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- projects -->
-    <section id="projects">
-      <div class="profileHead" style="font-size: large; padding-top: 5px">
-        <h4 class="textcolor">My Projects</h4>
-        <p style="line-height: 0px; font-size: 25px">Some of recent work</p>
-        <div class="profileLine"></div>
       </div>
 
-      <!-- project 1 -->
-      <div id="projectcard">
-        <!-- <div class="proimg"> -->
-        <div class="projectcard">
-          <img src="images/task.jpg" height="200px" />
 
-          <div class="backpic">
-            <h3 style="text-align: left">Task Manager</h3>
-            <p>
-              A full stack task management app built with Django,SQLite and
-              Bootstrap.
+      <!-- Smart Agri -->
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card h-100 bg-black text-white border-secondary">
+
+          <img
+            src="images/smart.png"
+            class="card-img-top"
+            alt="Smart Agri Project"
+          >
+
+          <div class="card-body">
+
+            <h4 class="card-title" style="color: black;">
+              Smart agriculture
+            </h4>
+
+            <p class="card-text text-secondary">
+              A smart agriculture project that uses technology
+              to support farming and improve agricultural practices.
             </p>
-            <div class="projectbutton">
-              <h3>View Code <i class="fa-regular fa-eye"></i></h3>
-              <h3 class="textcolor">
-                Live Demo <i class="fa-solid fa-arrow-right"></i>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <!-- </div> -->
 
-        <!-- project 2 -->
-        <!-- <div class="proimg"> -->
-        <div class="projectcard">
-          <img src="images/ecommerce.jpg" height="200px" />
-          <div class="backpic">
-            <h3 style="text-align: left">E-Commerce Website</h3>
-            <p>
-              A responsive e-commerce website built with React, Context API and
-              Stripe.
+            <span class="badge text-bg-primary">Python</span>
+            <span class="badge text-bg-primary">HTML</span>
+            <span class="badge text-bg-primary">CSS</span>
+            <span class="badge text-bg-primary">JavaScript</span>
+
+          </div>
+
+         
+
+        </div>
+
+      </div>
+
+
+      <!-- Robo Race -->
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card h-100 bg-black text-white border-secondary">
+
+          <img
+            src="https://iarduino.ru/img/catalog/84d34bdd546b4b3fdde7b889bbdde04a.jpg" height="200px"
+            class="card-img-top"
+            alt="Robo Race Project"
+          >
+
+          <div class="card-body" style="color: black;">
+
+            <h4 class="card-title">
+              Robo Race
+            </h4>
+
+            <p class="card-text text-secondary">
+              A robotics project developed for a racing challenge,
+              focusing on robot control, movement and performance.
             </p>
-            <div class="projectbutton">
-              <h3>View Code <i class="fa-regular fa-eye"></i></h3>
-              <h3 class="textcolor">
-                Live Demo <i class="fa-solid fa-arrow-right"></i>
-              </h3>
-            </div>
+
+            <span class="badge text-bg-primary">Robotics</span>
+            <span class="badge text-bg-primary">Arduino</span>
+            <span class="badge text-bg-primary">Sensors</span>
+
           </div>
-          <!-- </div> -->
+
+        
+
         </div>
 
-        <!-- project 3 -->
-        <!-- <div class="proimg"> -->
-        <div class="projectcard">
-          <img src="images/dashboard.png" height="200px" />
-          <div class="backpic">
-            <h3 style="text-align: left">Analytics Dashboard</h3>
-            <p>
-              A data analytics dashboard built with python,Django and Chart.js.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<!-- EDUCATION SECTION -->
+<section id="education" class="py-5 bg-white text-dark">
+
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+
+      <h1 class="display-5 fw-bold">
+        My <span class="text-primary">Education</span>
+      </h1>
+
+      <p class="text-secondary">
+        My academic journey and educational background.
+      </p>
+
+    </div>
+
+
+    <!-- Education Cards -->
+    <div class="row g-4">
+
+
+      <!-- M.E. -->
+      <div class="col-12">
+
+        <div class="card h-100 shadow-sm border-0">
+
+          <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between align-items-start
+                        flex-wrap gap-2">
+
+              <div>
+
+                <h4 class="card-title text-primary mb-2">
+                  Master of Engineering (M.E.) - Computer Science and Engineering
+                </h4>
+
+                <h6 class="text-dark">
+                  E.S. Engineering College and Technology
+                </h6>
+
+              </div>
+
+              <span class="badge text-bg-primary">
+                Currently Pursuing
+              </span>
+
+            </div>
+
+            <p class="card-text text-dark mt-3 mb-0">
+              Currently pursuing my M.E. in Computer Science and Engineering,
+              with a focus on developing my technical knowledge and software
+              development skills.
             </p>
-            <div class="projectbutton">
-              <h3>View Code <i class="fa-regular fa-eye"></i></h3>
-              <h3 class="textcolor">
-                Live Demo <i class="fa-solid fa-arrow-right"></i>
-              </h3>
-            </div>
+
           </div>
+
         </div>
-        <!-- </div> -->
-      </div>
-    </section>
 
-    <!-- end page -->
-    <section id="endpage">
-      <!-- end page left -->
-      <div class="end">
-        <p>LET'S CONNECT</p>
-        <h2>Get in Touch</h2>
-        <div class="endline"></div>
-        <p>
-          I'm always open to discussing new opportunites,<br />collobaration or
-          just a friendly chat.
-        </p>
       </div>
 
-      <!-- end page center -->
-      <div class="end">
-        <p><i class="fa-regular fa-envelope"></i> malarohith0@gmail.com</p>
-        <p>7550325505</p>
-        <p><i class="fa-solid fa-location-dot"></i> Puducherry, India</p>
-      </div>
 
-      <!-- end page right -->
-      <div class="end">
-        <div id="endin">
-          <input type="text" placeholder="your name" />
-          <input type="email" placeholder="email" /> <br />
-          <textarea
-            placeholder="Your Message"
-            style="margin-top: 10px"
-          ></textarea>
-          <br />
-          <button type="submit" id="message">Send Message</button>
+      <!-- B.Tech -->
+      <div class="col-12 col-lg-6">
+
+        <div class="card h-100 shadow-sm border-0">
+
+          <div class="card-body p-4">
+
+            <h4 class="card-title text-primary">
+              Bachelor of Technology (B.Tech)
+            </h4>
+
+            <h6 class="text-dark mt-3">
+              Mechatronics 
+            </h6>
+
+            <p class="text-dark mb-3">
+              Sri Manakula Vinayagar Engineering College
+            </p>
+
+            <span class="badge text-bg-primary" style="color: black;">
+              CGPA: 7.79
+            </span>
+
+          </div>
+
         </div>
-      </div>
-    </section>
 
-    <!-- footer -->
-    <section id="footer">
-      <footer>
-        <p>@ 2026 Rohith B. All rights reserved.</p>
-      </footer>
-    </section>
-  </body>
+      </div>
+
+
+      <!-- HSC -->
+      <div class="col-12 col-lg-6">
+
+        <div class="card h-100 shadow-sm border-0">
+
+          <div class="card-body p-4">
+
+            <h4 class="card-title text-primary" >
+              Higher Secondary Certificate (HSC)
+            </h4>
+
+            <h6 class="text-dark mt-3">
+              Aditya Vidyashram Residential School
+            </h6>
+
+            <span class="badge text-bg-primary" style="color: black;">
+              Percentage: 70.8%
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- SSLC -->
+      <div class="col-12 col-lg-6">
+
+        <div class="card h-100 shadow-sm border-0">
+
+          <div class="card-body p-4">
+
+            <h4 class="card-title text-primary">
+              Secondary School Leaving Certificate (SSLC)
+            </h4>
+
+            <h6 class="text-dark mt-3">
+              Aditya Vidyashram Residential School
+            </h6>
+
+            <span class="badge text-bg-primary" style="color: black;">
+              Percentage: 65.6%
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+<hr>
+
+<!-- EXPERIENCE SECTION -->
+<section id="experience" class="py-5 bg-white text-dark">
+
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+
+      <h1 class="display-5 fw-bold">
+        My <span class="text-primary">Experience</span>
+      </h1>
+
+      <p class="text-secondary">
+        My internship experience and practical exposure.
+      </p>
+
+    </div>
+
+
+    <!-- Experience Cards -->
+    <div class="row g-4 justify-content-center">
+
+
+      <!-- Plasmid Internship -->
+      <div class="col-12 col-lg-6">
+
+        <div class="card h-100 shadow-sm border-0">
+
+          <div class="card-body p-4">
+
+            <span class="badge text-bg-primary mb-3">
+              Internship
+            </span>
+
+            <h4 class="card-title fw-bold">
+              SQL Intern
+            </h4>
+
+            <h6 class="text-primary mt-2">
+              Plasmid
+            </h6>
+
+            <p class="text-secondary mt-3">
+              Completed an internship as an SQL Intern, where I gained
+              practical experience working with databases, SQL queries,
+              data management, and database-related concepts.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Aqua Green Internship -->
+      <div class="col-12 col-lg-6">
+
+        <div class="card h-100 shadow-sm border-0">
+
+          <div class="card-body p-4">
+
+            <span class="badge text-bg-primary mb-3">
+              Internship
+            </span>
+
+            <h4 class="card-title fw-bold">
+              Manufacturing Department Intern
+            </h4>
+
+            <h6 class="text-primary mt-2">
+              Aqua Green
+            </h6>
+
+            <p class="text-secondary mt-3">
+              Completed an internship in the Manufacturing Department,
+              gaining practical exposure to manufacturing processes,
+              operations, and industrial practices.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+<hr>
+
+
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="py-5 bg-white text-dark">
+
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+
+      <h1 class="display-5 fw-bold">
+        Contact <span class="text-primary">Me</span>
+      </h1>
+
+      <p class="text-secondary">
+        Feel free to get in touch with me for opportunities, projects,
+        or any queries.
+      </p>
+
+    </div>
+
+
+    <div class="row g-4 justify-content-center">
+
+
+      <!-- CONTACT INFORMATION -->
+      <div class="col-12 col-lg-5">
+
+        <div class="card h-100 shadow-sm border-0">
+
+          <div class="card-body p-4">
+
+            <h4 class="fw-bold mb-4">
+              Get In Touch
+            </h4>
+
+            <p class="text-secondary">
+              I'm always open to discussing new projects, opportunities,
+              or ideas. Feel free to contact me.
+            </p>
+
+
+            <!-- Email -->
+            <div class="d-flex align-items-center mb-4">
+
+              <div class="fs-3 text-primary me-3">
+                ✉
+              </div>
+
+              <div>
+                <small class="text-secondary">
+                  Email
+                </small>
+
+                <p class="mb-0 fw-semibold">
+                  yourmail@gmail.com
+                </p>
+              </div>
+
+            </div>
+
+
+            <!-- Phone -->
+            <div class="d-flex align-items-center mb-4">
+
+              <div class="fs-3 text-primary me-3">
+                ☎
+              </div>
+
+              <div>
+                <small class="text-secondary">
+                  Phone
+                </small>
+
+                <p class="mb-0 fw-semibold">
+                  +91 XXXXXXXXXX
+                </p>
+              </div>
+
+            </div>
+
+
+            <!-- Location -->
+            <div class="d-flex align-items-center mb-4">
+
+              <div class="fs-3 text-primary me-3">
+                📍
+              </div>
+
+              <div>
+                <small class="text-secondary">
+                  Location
+                </small>
+
+                <p class="mb-0 fw-semibold">
+                  Puducherry, India
+                </p>
+              </div>
+
+            </div>
+
+
+            <!-- LinkedIn -->
+            <div class="d-flex align-items-center mb-4">
+
+              <div class="fs-3 text-primary me-3">
+                in
+              </div>
+
+              <div>
+                <small class="text-secondary">
+                  LinkedIn
+                </small>
+
+                <p class="mb-0 fw-semibold">
+                 <a href="https://www.linkedin.com/in/rohith-b-759861349" style="text-decoration: none;" target="_blank">LinkedIn</a>
+                </p>
+              </div>
+
+            </div>
+
+
+            <!-- GitHub -->
+            <div class="d-flex align-items-center">
+
+              <div class="fs-3 text-primary me-3">
+                &lt;/&gt;
+              </div>
+
+              <div>
+                <small class="text-secondary">
+                  GitHub
+                </small>
+
+                <p class="mb-0 fw-semibold">
+                  <a
+                    href="https://github.com/rohith05b"
+                    target="_blank" style="text-decoration: none;" >
+                    GitHub
+                  </a>
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTACT FORM -->
+      <div class="col-12 col-lg-7">
+
+        <div class="card shadow-sm border-0">
+
+          <div class="card-body p-4">
+
+            <h4 class="fw-bold mb-4">
+              Send Me a Message
+            </h4>
+
+
+            <form>
+
+              <!-- Name -->
+              <div class="mb-3">
+
+                <label for="name" class="form-label">
+                  Name
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                  required
+                >
+
+              </div>
+
+
+              <!-- Email -->
+              <div class="mb-3">
+
+                <label for="email" class="form-label">
+                  Email
+                </label>
+
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                >
+
+              </div>
+
+
+              <!-- Message -->
+              <div class="mb-3">
+
+                <label for="message" class="form-label">
+                  Message
+                </label>
+
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  placeholder="Enter your message"
+                  required
+                ></textarea>
+
+              </div>
+
+
+              <!-- Button -->
+              <button
+                type="submit"
+                class="btn btn-primary px-4"
+              >
+                Send Message
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+</body>
 </html>
